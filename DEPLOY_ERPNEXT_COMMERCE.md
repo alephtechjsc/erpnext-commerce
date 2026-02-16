@@ -22,22 +22,15 @@ cd erpnext
 cp example.env .env
 ```
 
-Edit `.env` — set your DB password:
-
-```bash
-sed -i 's/DB_PASSWORD=123/DB_PASSWORD=YOUR_DB_PASSWORD/' .env
-```
-
 Check if port 8080 is free:
 
 ```bash
 ss -tlnp | grep 8080
 ```
 
-If port 8080 is in use, change the port in `pwd.yml`:
+If port 8080 is in use, change the port in `pwd.yml` to a free one (e.g. 8082):
 
 ```bash
-# Replace 8080 with a free port (e.g. 8082)
 sed -i 's/"8080:8080"/"8082:8080"/' pwd.yml
 ```
 
@@ -57,9 +50,27 @@ All containers should show `Up` status, including `frontend`.
 
 ---
 
-## Step 2: Verify ERPNext Site
+## Step 2: Wait for Site Creation
 
-The `pwd.yml` auto-creates a site named `frontend`. Verify:
+> **IMPORTANT:** The `pwd.yml` auto-creates a site named `frontend` with ERPNext. This takes 3-5 minutes on first run. **Do NOT run any bench commands until it finishes.**
+
+Watch the progress:
+
+```bash
+docker compose -f pwd.yml logs create-site -f
+```
+
+Wait until you see output like:
+
+```
+create-site-1  | Installing erpnext...
+...
+create-site-1 exited with code 0
+```
+
+Press `Ctrl+C` to stop watching logs.
+
+Then verify:
 
 ```bash
 docker compose -f pwd.yml exec backend bench --site all list-apps
@@ -72,25 +83,17 @@ frappe  x.x.x
 erpnext x.x.x
 ```
 
-If no site exists, create one manually:
-
-```bash
-docker compose -f pwd.yml exec backend bench new-site frontend \
-  --db-root-username root \
-  --mariadb-root-password YOUR_DB_PASSWORD \
-  --admin-password admin \
-  --install-app erpnext
-```
+> The default login is `Administrator` / `admin` and the DB password is `123` (from `.env`).
 
 ---
 
 ## Step 3: Install ERPNext Commerce
 
+Get the app (use `--skip-assets` because the app has no frontend assets):
+
 ```bash
 docker compose -f pwd.yml exec backend bench get-app --skip-assets https://github.com/alephtechjsc/erpnext-commerce.git
 ```
-
-> `--skip-assets` is required because the app has no frontend assets.
 
 Fix the app name in apps.txt (bench registers it with hyphens, but Python needs underscores):
 
@@ -120,11 +123,11 @@ docker compose -f pwd.yml restart
 
 ## Step 4: Verify Installation
 
-Open browser: `http://YOUR_SERVER_IP:8082` (or whichever port you configured).
+Open browser: `http://YOUR_SERVER_IP:8082` (or 8080 if you didn't change the port).
 
 Login:
 - **User:** `Administrator`
-- **Password:** `admin` (or whatever you set)
+- **Password:** `admin`
 
 ### Quick Checks
 
@@ -172,6 +175,20 @@ docker compose -f pwd.yml restart
 
 ---
 
+## Full Reset
+
+To completely start over (destroys all data):
+
+```bash
+cd ~/workspace/erpnext
+docker compose -f pwd.yml down -v
+docker compose -f pwd.yml up -d
+```
+
+Then wait for `create-site` to finish (Step 2) and re-install erpnext_commerce (Step 3).
+
+---
+
 ## Uninstall
 
 ```bash
@@ -188,12 +205,13 @@ docker compose -f pwd.yml restart
 | Problem | Solution |
 |---|---|
 | `address already in use` on startup | Change port in `pwd.yml`: `sed -i 's/"8080:8080"/"FREE_PORT:8080"/' pwd.yml` |
-| `ModuleNotFoundError: erpnext-commerce` | Fix apps.txt: `sed -i 's/erpnext-commerce/erpnext_commerce/' sites/apps.txt` |
+| `ModuleNotFoundError: erpnext-commerce` | Fix apps.txt: `docker compose -f pwd.yml exec backend sed -i 's/erpnext-commerce/erpnext_commerce/' /home/frappe/frappe-bench/sites/apps.txt` |
+| `DoesNotExistError` on list-apps | Site is still being created. Wait for `create-site` container to finish. |
 | Internal server error after install | Restart: `docker compose -f pwd.yml restart` |
-| Fixtures not loading | Run: `bench --site frontend migrate` |
-| Workspace not visible | Clear cache: `bench --site frontend clear-cache` and reload browser |
+| Fixtures not loading | Run: `docker compose -f pwd.yml exec backend bench --site frontend migrate` |
+| Workspace not visible | Clear cache: `docker compose -f pwd.yml exec backend bench --site frontend clear-cache` and reload browser |
 | Container not starting | Check logs: `docker compose -f pwd.yml logs <service> --tail 50` |
-| DB access denied on new-site | Use `--db-root-username root` and the password from `.env` |
+| DB access denied on new-site | Use `--db-root-username root` and the password from `.env` (default: `123`) |
 | SSH disconnects during migrate | Normal for long operations. Migration still completes. Reconnect and verify. |
 
 ---
@@ -202,16 +220,17 @@ docker compose -f pwd.yml restart
 
 ```
 Docker Containers (pwd.yml)
-├── frontend    — Nginx reverse proxy (port 8082 -> 8080)
-├── backend     — Frappe/ERPNext application server
-├── db          — MariaDB 10.6
-├── redis-cache — Redis for caching
-├── redis-queue — Redis for background jobs
-├── websocket   — Real-time updates
-├── scheduler   — Background job scheduler
-├── queue-short — Short-running background jobs
-├── queue-long  — Long-running background jobs
-└── configurator — Initial setup
+├── frontend      — Nginx reverse proxy (port 8082 -> 8080)
+├── backend       — Frappe/ERPNext application server
+├── db            — MariaDB 10.6
+├── redis-cache   — Redis for caching
+├── redis-queue   — Redis for background jobs
+├── websocket     — Real-time updates
+├── scheduler     — Background job scheduler
+├── queue-short   — Short-running background jobs
+├── queue-long    — Long-running background jobs
+├── configurator  — Initial config
+└── create-site   — Auto-creates site on first run (exits after done)
 ```
 
 ## What ERPNext Commerce Does
