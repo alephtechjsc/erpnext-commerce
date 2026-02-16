@@ -57,6 +57,8 @@ Check if port 8080 is free:
 
 ```bash
 ss -tlnp | grep 8080
+ps -p 3802442 -o comm,args
+kill 3802442
 ```
 
 If something is using 8080, change to a free port (e.g. 8082):
@@ -108,8 +110,7 @@ If you get `DoesNotExistError`, the site is still being created. Wait and try ag
 Run this single command:
 
 ```bash
-docker compose -f pwd.yml exec backend bash -c \
-  "git clone https://github.com/alephtechjsc/erpnext-commerce.git /tmp/erpnext-commerce && bash /tmp/erpnext-commerce/install.sh frontend && rm -rf /tmp/erpnext-commerce"
+docker compose -f pwd.yml exec backend bash -c "git clone https://github.com/alephtechjsc/erpnext-commerce.git /tmp/erpnext-commerce && bash /tmp/erpnext-commerce/install.sh frontend && rm -rf /tmp/erpnext-commerce"
 ```
 
 You should see steps [1/5] through [5/5] and finally `=== Done! ===`.
