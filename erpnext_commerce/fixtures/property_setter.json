@@ -1,7 +1,7 @@
 [
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Sales Order",
     "field_name": "naming_series",
     "property": "options",
@@ -11,7 +11,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Sales Order",
     "field_name": "naming_series",
     "property": "default",
@@ -21,7 +21,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Purchase Order",
     "field_name": "naming_series",
     "property": "options",
@@ -31,7 +31,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Purchase Order",
     "field_name": "naming_series",
     "property": "default",
@@ -41,7 +41,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Sales Invoice",
     "field_name": "naming_series",
     "property": "options",
@@ -51,7 +51,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Sales Invoice",
     "field_name": "naming_series",
     "property": "default",
@@ -61,7 +61,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Purchase Invoice",
     "field_name": "naming_series",
     "property": "options",
@@ -71,7 +71,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Purchase Invoice",
     "field_name": "naming_series",
     "property": "default",
@@ -81,7 +81,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Delivery Note",
     "field_name": "naming_series",
     "property": "options",
@@ -91,7 +91,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Delivery Note",
     "field_name": "naming_series",
     "property": "default",
@@ -101,7 +101,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Purchase Receipt",
     "field_name": "naming_series",
     "property": "options",
@@ -111,7 +111,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Purchase Receipt",
     "field_name": "naming_series",
     "property": "default",
@@ -121,7 +121,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Payment Entry",
     "field_name": "naming_series",
     "property": "options",
@@ -131,7 +131,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Payment Entry",
     "field_name": "naming_series",
     "property": "default",
@@ -141,7 +141,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Journal Entry",
     "field_name": "naming_series",
     "property": "options",
@@ -151,7 +151,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Journal Entry",
     "field_name": "naming_series",
     "property": "default",
@@ -161,7 +161,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Quotation",
     "field_name": "naming_series",
     "property": "options",
@@ -171,7 +171,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Quotation",
     "field_name": "naming_series",
     "property": "default",
@@ -181,7 +181,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Material Request",
     "field_name": "naming_series",
     "property": "options",
@@ -191,7 +191,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Material Request",
     "field_name": "naming_series",
     "property": "default",
@@ -201,7 +201,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Stock Entry",
     "field_name": "naming_series",
     "property": "options",
@@ -211,7 +211,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Stock Entry",
     "field_name": "naming_series",
     "property": "default",
@@ -221,7 +221,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Item",
     "field_name": "manufacturing",
     "property": "hidden",
@@ -231,7 +231,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Item",
     "field_name": "is_sub_contracted_item",
     "property": "hidden",
@@ -241,7 +241,7 @@
   },
   {
     "doctype": "Property Setter",
-    "doctype_or_docfield": "DocField",
+    "doctype_or_field": "DocField",
     "doc_type": "Item",
     "field_name": "default_bom",
     "property": "hidden",

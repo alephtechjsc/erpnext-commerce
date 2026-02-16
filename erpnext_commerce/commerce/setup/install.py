@@ -165,7 +165,7 @@ def _set_naming_series():
                     frappe.get_doc(
                         {
                             "doctype": "Property Setter",
-                            "doctype_or_docfield": "DocField",
+                            "doctype_or_field": "DocField",
                             "doc_type": doctype,
                             "field_name": "naming_series",
                             "property": "options",
@@ -191,7 +191,7 @@ def _set_naming_series():
                     frappe.get_doc(
                         {
                             "doctype": "Property Setter",
-                            "doctype_or_docfield": "DocField",
+                            "doctype_or_field": "DocField",
                             "doc_type": doctype,
                             "field_name": "naming_series",
                             "property": "default",
