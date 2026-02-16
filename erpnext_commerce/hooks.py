@@ -66,5 +66,5 @@ fixtures = [
 
 # Domains
 domains = {
-    "Commerce": "erpnext_commerce.commerce.setup.install.get_domain_data",
+    "Commerce": "erpnext_commerce.commerce.setup.domain",
 }
