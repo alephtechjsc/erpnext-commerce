@@ -1,6 +1,7 @@
 [
   {
     "doctype": "Role",
+    "name": "Commerce Admin",
     "role_name": "Commerce Admin",
     "desk_access": 1,
     "is_custom": 1,
@@ -9,6 +10,7 @@
   },
   {
     "doctype": "Role",
+    "name": "Sales User",
     "role_name": "Sales User",
     "desk_access": 1,
     "is_custom": 1,
@@ -17,6 +19,7 @@
   },
   {
     "doctype": "Role",
+    "name": "Purchase User",
     "role_name": "Purchase User",
     "desk_access": 1,
     "is_custom": 1,
@@ -25,6 +28,7 @@
   },
   {
     "doctype": "Role",
+    "name": "Stock User",
     "role_name": "Stock User",
     "desk_access": 1,
     "is_custom": 1,
@@ -33,6 +37,7 @@
   },
   {
     "doctype": "Role",
+    "name": "Accounts User",
     "role_name": "Accounts User",
     "desk_access": 1,
     "is_custom": 1,
