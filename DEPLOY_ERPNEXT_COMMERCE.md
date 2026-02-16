@@ -75,6 +75,8 @@ docker compose -f pwd.yml up -d
 
 ## Step 4: Wait for ERPNext to Be Ready
 
+> Make sure you are still in `~/workspace/erpnext` for all remaining steps.
+
 First run creates the database and site. Watch the logs:
 
 ```bash
