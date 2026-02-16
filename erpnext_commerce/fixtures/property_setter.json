@@ -1,0 +1,252 @@
+[
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Sales Order",
+    "field_name": "naming_series",
+    "property": "options",
+    "property_type": "Text",
+    "value": "SO-.YYYY.-\nSAL-ORD-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Sales Order",
+    "field_name": "naming_series",
+    "property": "default",
+    "property_type": "Text",
+    "value": "SO-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Purchase Order",
+    "field_name": "naming_series",
+    "property": "options",
+    "property_type": "Text",
+    "value": "PO-.YYYY.-\nPUR-ORD-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Purchase Order",
+    "field_name": "naming_series",
+    "property": "default",
+    "property_type": "Text",
+    "value": "PO-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Sales Invoice",
+    "field_name": "naming_series",
+    "property": "options",
+    "property_type": "Text",
+    "value": "SINV-.YYYY.-\nACC-SINV-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Sales Invoice",
+    "field_name": "naming_series",
+    "property": "default",
+    "property_type": "Text",
+    "value": "SINV-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Purchase Invoice",
+    "field_name": "naming_series",
+    "property": "options",
+    "property_type": "Text",
+    "value": "PINV-.YYYY.-\nACC-PINV-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Purchase Invoice",
+    "field_name": "naming_series",
+    "property": "default",
+    "property_type": "Text",
+    "value": "PINV-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Delivery Note",
+    "field_name": "naming_series",
+    "property": "options",
+    "property_type": "Text",
+    "value": "DN-.YYYY.-\nMAT-DN-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Delivery Note",
+    "field_name": "naming_series",
+    "property": "default",
+    "property_type": "Text",
+    "value": "DN-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Purchase Receipt",
+    "field_name": "naming_series",
+    "property": "options",
+    "property_type": "Text",
+    "value": "PR-.YYYY.-\nMAT-PRE-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Purchase Receipt",
+    "field_name": "naming_series",
+    "property": "default",
+    "property_type": "Text",
+    "value": "PR-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Payment Entry",
+    "field_name": "naming_series",
+    "property": "options",
+    "property_type": "Text",
+    "value": "PE-.YYYY.-\nACC-PAY-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Payment Entry",
+    "field_name": "naming_series",
+    "property": "default",
+    "property_type": "Text",
+    "value": "PE-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Journal Entry",
+    "field_name": "naming_series",
+    "property": "options",
+    "property_type": "Text",
+    "value": "JV-.YYYY.-\nACC-JV-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Journal Entry",
+    "field_name": "naming_series",
+    "property": "default",
+    "property_type": "Text",
+    "value": "JV-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Quotation",
+    "field_name": "naming_series",
+    "property": "options",
+    "property_type": "Text",
+    "value": "QTN-.YYYY.-\nSAL-QTN-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Quotation",
+    "field_name": "naming_series",
+    "property": "default",
+    "property_type": "Text",
+    "value": "QTN-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Material Request",
+    "field_name": "naming_series",
+    "property": "options",
+    "property_type": "Text",
+    "value": "MR-.YYYY.-\nMAT-MR-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Material Request",
+    "field_name": "naming_series",
+    "property": "default",
+    "property_type": "Text",
+    "value": "MR-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Stock Entry",
+    "field_name": "naming_series",
+    "property": "options",
+    "property_type": "Text",
+    "value": "STE-.YYYY.-\nMAT-STE-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Stock Entry",
+    "field_name": "naming_series",
+    "property": "default",
+    "property_type": "Text",
+    "value": "STE-.YYYY.-",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Item",
+    "field_name": "manufacturing",
+    "property": "hidden",
+    "property_type": "Check",
+    "value": "1",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Item",
+    "field_name": "is_sub_contracted_item",
+    "property": "hidden",
+    "property_type": "Check",
+    "value": "1",
+    "module": "Commerce"
+  },
+  {
+    "doctype": "Property Setter",
+    "doctype_or_docfield": "DocField",
+    "doc_type": "Item",
+    "field_name": "default_bom",
+    "property": "hidden",
+    "property_type": "Check",
+    "value": "1",
+    "module": "Commerce"
+  }
+]

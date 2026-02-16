@@ -1,0 +1,43 @@
+[
+  {
+    "doctype": "Role Profile",
+    "role_profile": "Commerce Admin Profile",
+    "roles": [
+      {"role": "Commerce Admin"},
+      {"role": "Sales User"},
+      {"role": "Purchase User"},
+      {"role": "Stock User"},
+      {"role": "Accounts User"}
+    ]
+  },
+  {
+    "doctype": "Role Profile",
+    "role_profile": "Sales Profile",
+    "roles": [
+      {"role": "Sales User"},
+      {"role": "Stock User"}
+    ]
+  },
+  {
+    "doctype": "Role Profile",
+    "role_profile": "Purchase Profile",
+    "roles": [
+      {"role": "Purchase User"},
+      {"role": "Stock User"}
+    ]
+  },
+  {
+    "doctype": "Role Profile",
+    "role_profile": "Stock Profile",
+    "roles": [
+      {"role": "Stock User"}
+    ]
+  },
+  {
+    "doctype": "Role Profile",
+    "role_profile": "Accounts Profile",
+    "roles": [
+      {"role": "Accounts User"}
+    ]
+  }
+]
