@@ -54,10 +54,6 @@ fixtures = [
             ]
         ],
     },
-    {
-        "dt": "Workspace",
-        "filters": [["name", "=", "Commerce"]],
-    },
 ]
 # Property Setters are created by install.py (_set_naming_series)
 # and exported via: bench --site SITE export-fixtures --app erpnext_commerce
