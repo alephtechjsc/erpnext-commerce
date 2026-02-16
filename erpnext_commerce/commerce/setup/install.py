@@ -84,6 +84,12 @@ def _disable_unwanted_modules():
 
 def _set_stock_settings():
     """Configure stock settings for trading companies."""
+    # Create UOM "Nos" if it doesn't exist
+    if not frappe.db.exists("UOM", "Nos"):
+        frappe.get_doc({"doctype": "UOM", "uom_name": "Nos", "must_be_whole_number": 1}).insert(
+            ignore_permissions=True
+        )
+
     stock_settings = frappe.get_single("Stock Settings")
 
     stock_settings.valuation_method = "FIFO"

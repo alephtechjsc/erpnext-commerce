@@ -1,6 +1,5 @@
 data = {
     "set_value": [
-        ["Stock Settings", None, "stock_uom", "Nos"],
         ["Stock Settings", None, "valuation_method", "FIFO"],
         ["Stock Settings", None, "show_barcode_field", 1],
         ["Stock Settings", None, "auto_indent", 1],
