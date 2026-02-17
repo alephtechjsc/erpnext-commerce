@@ -48,17 +48,23 @@ git --version
 ```bash
 mkdir -p ~/workspace
 cd ~/workspace
-git clone https://github.com/frappe/frappe_docker.git erpnext
+git clone https://github.com/alephtechjsc/frappe_docker.git erpnext
 cd erpnext
 cp example.env .env
+```
+
+Create data directories and set permissions (frappe runs as UID 1000 inside the container):
+
+```bash
+mkdir -p ./data/sites ./data/logs ./data/db ./data/redis-queue
+echo '{}' > ./data/sites/common_site_config.json
+chown -R 1000:1000 ./data/sites ./data/logs ./data/redis-queue
 ```
 
 Check if port 8080 is free:
 
 ```bash
 ss -tlnp | grep 8080
-ps -p 3802442 -o comm,args
-kill 3802442
 ```
 
 If something is using 8080, change to a free port (e.g. 8082):
@@ -197,7 +203,11 @@ docker compose -f pwd.yml restart
 ### Full Reset (destroys all data)
 
 ```bash
-docker compose -f pwd.yml down -v
+docker compose -f pwd.yml down
+rm -rf ./data
+mkdir -p ./data/sites ./data/logs ./data/db ./data/redis-queue
+echo '{}' > ./data/sites/common_site_config.json
+chown -R 1000:1000 ./data/sites ./data/logs ./data/redis-queue
 docker compose -f pwd.yml up -d
 ```
 
