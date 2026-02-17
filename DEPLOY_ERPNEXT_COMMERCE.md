@@ -96,7 +96,6 @@ docker compose -f pwd.yml exec backend bench --site all list-apps
 Expected output:
 
 ```
-frontend
 frappe
 erpnext
 ```
@@ -107,13 +106,31 @@ If you get `DoesNotExistError`, the site is still being created. Wait and try ag
 
 ## Step 5: Install ERPNext Commerce
 
-Run this single command:
+Enter the backend container:
 
 ```bash
-docker compose -f pwd.yml exec backend bash -c "git clone https://github.com/alephtechjsc/erpnext-commerce.git /tmp/erpnext-commerce && bash /tmp/erpnext-commerce/install.sh frontend && rm -rf /tmp/erpnext-commerce"
+docker compose -f pwd.yml exec backend bash
 ```
 
-You should see steps [1/5] through [5/5] and finally `=== Done! ===`.
+Inside the container, run these commands:
+
+```bash
+# Get the app
+bench get-app --skip-assets https://github.com/alephtechjsc/erpnext-commerce.git
+
+# Fix apps.txt (bench registers with hyphens, Python needs underscores)
+sed -i 's/erpnext-commerce/erpnext_commerce/' /home/frappe/frappe-bench/sites/apps.txt
+
+# Install on site
+bench --site frontend install-app erpnext_commerce
+
+# Migrate and clear cache
+bench --site frontend migrate
+bench --site frontend clear-cache
+
+# Exit container
+exit
+```
 
 Restart:
 
